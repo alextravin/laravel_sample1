@@ -20,5 +20,5 @@ COPY ./conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 COPY ./conf/custom.ini /usr/local/etc/php/conf.d/
 
-WORKDIR /var/www/mysite.local
+WORKDIR /var/www/mysite.local/laravel
 RUN chown -R www-data:www-data /var/www
