@@ -5,7 +5,7 @@ ARG DEPS="bash vim git wget npm"
 RUN apk update && apk add --no-cache $DEPS
 
 ARG DEPS_PHP="xdebug http pdo_mysql mcrypt zip intl gd"
-ADD https://raw.githubusercontent.com/mlocati/docker-php-extension-installer/master/install-php-extensions /usr/local/bin/
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 RUN chmod u+x /usr/local/bin/install-php-extensions \
     && sync \
     && install-php-extensions $DEPS_PHP
